@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  height: 1024px auto;
+  width: 768px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.541);
+}
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(209, 207, 207);
+}
+.chek_btn {
+  margin-top: 0px;
+  margin-left: 20px;
+  padding-top: 2.3px;
+  height: 30px;
+  width: 26px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.bar1,
+.bar2,
+.bar3 {
+  display: block;
+  border: 1px solid blue;
+  width: 20px;
+  height: 3px;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+.logo_tomo {
+  display: inline-block;
+  width: 25%;
+  height: 30px;
+  background-color: honeydew;
+  margin-left: 17px;
+  border-radius: 15px;
+}
+.M_tomobil,
+.D_tomobil {
+  clear: both;
+  text-transform: uppercase;
+  border: none;
+  margin-right: 20px;
+  padding: 0;
+  background-color: transparent;
+  color: blue;
+  min-width: 55%;
+  text-align: right;
+  display: inline-block;
+}
+.M_tomobil {
+  float: right;
+  font-weight: bolder;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.D_tomobil {
+  float: right;
+  font-size: 12px;
+}
+nav {
+  height: 40px;
+  width: 100%;
+  border-bottom: 2.5px solid red;
+  background-color: rgb(18, 18, 175);
+  margin-bottom: 40px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 40px;
+  text-decoration: none;
+  border: none;
+  margin-left: 10px;
+}
+nav ul li a {
+  color: rgb(178, 180, 194);
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+i {
+  color: rgb(178, 180, 194);
+  font-size: 14px;
+  /* margin-left: 10px; */
+}
+
+li a.active,
+a:hover {
+  color: white;
+  font-size: 17px;
+  font-weight: bolder;
+}
+.immatricul,
+.plaque_c,
+.enrg-poll {
+  border: 2px solid rgb(4, 4, 99);
+  width: auto;
+  margin: 15px 10px 0px 10px;
+  border-radius: 5px;
+  padding: 20px 20px 40px 20px;
+}
+.frappe,
+.klm {
+  border: 1px solid grey;
+  width: auto;
+  margin: 15px 10px 0px 10px;
+  border-radius: 5px;
+  padding: 20px 20px 40px 20px;
+}
+.Nbr-matricul-Av,
+.Nbr-matricul-Ar {
+  position: relative;
+  height: 48px;
+  width: 35%;
+  display: inline-block;
+  margin: 20px 10px;
+}
+.Nbr-matricul-Ar {
+  margin-left: 10%;
+}
+.Nbr-matricul-Av > label,
+.Nbr-matricul-Ar > label {
+  position: absolute;
+  left: 5px;
+  top: -19px;
+  color: grey;
+}
+.Nbr-matricul-Av > input,
+.Nbr-matricul-Ar > input {
+  width: 100%;
+  height: 95%;
+  text-align: center;
+  display: inline-block;
+  font-weight: bolder;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 6px;
+  font-size: 20px;
+  color: blue;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+.Nbr-matricul-Av input + span::before,
+.Nbr-matricul-Ar input + span::before,
+.Nbr-matricul-Av input + span::after,
+.Nbr-matricul-Ar input + span::after {
+  position: absolute;
+  top: 2px;
+  background-image: url("urop.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: top 15% center;
+  background-color: blue;
+  display: inline-block;
+  height: 48px;
+  width: 30px;
+  color: white;
+  content: "F";
+  line-height: 75px;
+  text-align: center;
+}
+.Nbr-matricul-Av input + span::after,
+.Nbr-matricul-Ar input + span::after {
+  right: -2px;
+  border-radius: 0 4px 4px 0;
+}
+.Nbr-matricul-Av input + span::before,
+.Nbr-matricul-Ar input + span::before {
+  left: 2px;
+  border-radius: 4px 0 0 4px;
+}
+h3 {
+  display: inline-block;
+  margin: 0px 10px 40px 5px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+.btn_saisie {
+  float: right;
+  margin: 2px 2px;
+  border-radius: 15px;
+  background-color: rgb(250, 168, 60);
+  border: none;
+  color: rgb(248, 248, 248);
+  width: 90px;
+  height: 30px;
+  outline: none;
+}
+.nbr_plaque-c,
+.nbr_frappe-f {
+  border: none;
+  width: 75%;
+  background: repeating-linear-gradient(
+      90deg,
+      dimgrey 0ch,
+      dimgrey 1ch,
+      transparent 0,
+      transparent 1.5ch
+    )
+    0 85%/100% 2.5px no-repeat;
+  color: dimgrey;
+  font: 4ch consolas, monospace;
+  letter-spacing: 0.5ch;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.nbr_plaque-c:focus,
+.nbr_frappe-f:focus {
+  outline: none;
+  color: blue;
+}
+.plaque_c > label,
+.frappe > label {
+  margin: 0 20px 0 5px;
+  font-weight: bold;
+}
+.text-g {
+  color: grey;
+}
+.nbr_klm {
+  width: 25%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(131, 131, 131);
+  padding: 5px 10px;
+}
+.sp_energ {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: blue;
+}
+.part_en1 {
+  display: inline-block;
+  width: 40%;
+}
+.part_en2 {
+  display: inline-block;
+  width: 50%;
+  margin-left: 10;
+}
+.btn_sv {
+  outline: none;
+  float: right;
+  margin: 40px 10px 20px ;
+  border: 1px solid blue;
+  background-color: blue;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 25px;
+  text-align: left;
+  padding-left:20px ;
+}
