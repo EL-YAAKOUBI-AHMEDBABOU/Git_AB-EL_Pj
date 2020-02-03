@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(207, 207, 207);
+}
+
+.sidebar {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background: #0e1518;
+  transition: all 0.5s ease;
+  overflow: auto;
+}
+
+.sidebar header {
+  background: #0e1518;
+  user-select: none;
+  height: 150px;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+ul li:hover a {
+  background-color: #1b272c;
+  border-left: 5px solid red;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  background: white;
+  cursor: pointer;
+}
+
+label #btn img {
+  display: block;
+  height: 5px;
+  color: black;
+}
+
+label #btn img:nth-child(2) {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+label #btn {
+  left: 20px;
+  top: 25px;
+  font-size: 40px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 25px;
+  font-size: 30px;
+  color: #0a5275;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 290px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+section {
+  height: 100vh;
+  transition: all 0.5s;
+  margin-left: 280px;
+}
+
+section div:first-child {
+  background-color: white;
+  width: 100%;
+  height: 150px;
+}
+
+section div:nth-child(2) {
+  position: relative;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 25px;
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-radius:9px;
+}
+
+.content table {
+  width: 95%;
+  margin-left: 2.5%;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+.content span{
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 77, 77);
+  border-radius: 4px;
+  box-shadow: 6px 5px 6px #888888;
+  height: 50px;
+  width: 50px;
+}
+@media (max-width: 952px) {
+  .sidebar {
+    left: -280px;
+  }
+  section {
+    margin-left: 0;
+  }
+  #check:checked ~ section {
+    margin-left: 280px;
+    margin-right: -280px;
+  }
+  #check:checked ~ label #cancel {
+    left: 295px;
+  }
+}
