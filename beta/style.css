@@ -37,6 +37,25 @@ body {
   transition: 0.4s;
 }
 
+.sidebar ul a .Dashboard ,.secteur {
+  margin-right: 5px;
+  margin-left: -35px;
+  padding: 10px 20px 10px 22.2px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border:1px solid white ;
+}
+
+.sidebar ul a .Dashboard {
+  background: url(dashboard.svg) no-repeat;
+}
+
+.sidebar ul a .secteur {
+background: url(section.svg) no-repeat;
+
+}
+
 ul li:hover a {
   background-color: #1b272c;
   border-left: 5px solid red;
@@ -49,7 +68,6 @@ ul li:hover a {
 label #btn,
 label #cancel {
   position: absolute;
-  background: white;
   cursor: pointer;
 }
 
@@ -68,7 +86,7 @@ label #btn {
   left: 20px;
   top: 25px;
   font-size: 40px;
-  color: white;
+  /* color: white; */
   padding: 6px 12px;
   transition: all 0.5s;
 }
@@ -100,9 +118,100 @@ section {
 }
 
 section div:first-child {
+  position: relative;
   background-color: white;
   width: 100%;
   height: 150px;
+  padding: 0 5% 0 5%;
+}
+
+section div:first-child .zon {
+  float: right;
+  width: 100px;
+  margin: 4px 5%;
+  height: 20px;
+}
+.zon img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.head > input[type="text"] {
+  position: absolute;
+  bottom: 4px;
+  width: 72%;
+  height: 35px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: white;
+  background-image: url("search.png");
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  padding-left: 35px;
+  outline: none;
+  display: inline-block;
+}
+
+.head > input[type="text"] + .Project::before {
+  content: "Projects";
+  position: absolute;
+  font-size: 22px;
+  font-weight: bolder;
+  bottom: 45px;
+}
+
+.zon_add-slect {
+  position: absolute;
+  bottom: 45px;
+  right: 14%;
+  width: 265px;
+  height: 35px;
+}
+
+.Action {
+  width: 120px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-left: 2px;
+  outline: none;
+}
+.Add_Project {
+  color: white;
+  width: 140px;
+  height: 35px;
+  background-color: #00b300;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 22px;
+  padding-left: 2px;
+  outline: none;
+  border: none;
+}
+.Filters {
+  position: absolute;
+  bottom: 4px;
+  right: 14%;
+  width: 120px;
+  height: 35px;
+  background-color: white;
+  background-image: url("filter_list_black_192x192.png");
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  padding-right: 35px;
+  padding-left: 2px;
+  border: 1px solid black;
+  outline: none;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 section div:nth-child(2) {
@@ -113,7 +222,7 @@ section div:nth-child(2) {
   background-color: white;
   padding-top: 100px;
   padding-bottom: 100px;
-  border-radius:9px;
+  border-radius: 9px;
 }
 
 .content table {
@@ -126,7 +235,7 @@ th {
   font-weight: bold;
 }
 
-.content span{
+.content span {
   position: absolute;
   top: -15px;
   left: 15px;
@@ -141,6 +250,12 @@ th {
 @media (max-width: 952px) {
   .sidebar {
     left: -280px;
+  }
+  label #btn,
+  label #cancel {
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
   }
   section {
     margin-left: 0;
